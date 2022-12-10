@@ -1,0 +1,335 @@
+[
+    {
+        "question": "¿Cuál es el río más largo del mundo?",
+        "answers": [
+            "Nilo",
+            "Amazonas",
+            "Misisipi",
+            "Yangtsé"
+        ]
+    },
+    {
+        "question": "¿Cuál es el océano más grande del mundo?",
+        "answers": [
+            "Pacífico",
+            "Atlántico",
+            "Índico",
+            "Artico"
+        ]
+    },
+    {
+        "question": "¿Cuál es el país más grande del mundo?",
+        "answers": [
+            "Rusia",
+            "Estados Unidos",
+            "China",
+            "Canadá"
+        ]
+    },
+    {
+        "question": "¿Cuál es el desierto más grande del mundo?",
+        "answers": [
+            "Desierto de Sahara",
+            "Desierto de Mojave",
+            "Desierto de Atacama",
+            "Desierto del Gobi"
+        ]
+    },
+    {
+        "question": "¿Cuál es el lago más grande del mundo?",
+        "answers": [
+            "Lago Superior",
+            "Mar Caspio",
+            "Lago Victoria",
+            "Lago Titicaca"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más grande del mundo?",
+        "answers": [
+            "Ballena azul",
+            "Elefante",
+            "Rinoceronte",
+            "Hipopótamo"
+        ]
+    },
+    {
+        "question": "¿Cuál es el árbol más alto del mundo?",
+        "answers": [
+            "Secuoya roja",
+            "Cedro del Atlas",
+            "Eucalipto",
+            "Árbol del abedul"
+        ]
+    },
+    {
+        "question": "¿Cuál es la ciudad más poblada del mundo?",
+        "answers": [
+            "Tokio",
+            "Nueva York",
+            "Mumbai",
+            "México DF"
+        ]
+    },
+    {
+        "question": "¿Cuál es el edificio más alto del mundo?",
+        "answers": [
+            "Burj Khalifa",
+            "Torre Eiffel",
+            "Torre de Pisa",
+            "Torre de Londres"
+        ]
+    },
+    {
+        "question": "¿Cuál es la montaña más alta del mundo?",
+        "answers": [
+            "Monte Everest",
+            "Monte Kilimanjaro",
+            "Monte Elbrus",
+            "Monte Aconcagua"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más rápido del mundo?",
+        "answers": [
+            "El peregrino africano (falcón peregrino)",
+            "La jirafa",
+            "El elefante",
+            "El tiburón"
+        ]
+    },
+    {
+        "question": "¿Cuál es la planta más grande del mundo?",
+        "answers": [
+            "La secuoya gigante",
+            "La palma",
+            "El cactus",
+            "El eucalipto"
+        ]
+    },
+    {
+        "question": "¿Cuál es la estrella más brillante del cielo nocturno?",
+        "answers": [
+            "Sirio",
+            "Vega",
+            "Rigel",
+            "Betelgeuse"
+        ]
+    },
+    {
+        "question": "¿Cuál es el país con la mayor cantidad de habitantes?",
+        "answers": [
+            "China",
+            "India",
+            "Estados Unidos",
+            "Brasil"
+        ]
+    },
+    {
+        "question": "¿Cuál es el lugar más frío del mundo?",
+        "answers": [
+            "El Polo Sur",
+            "El Polo Norte",
+            "La Antártida",
+            "Siberia"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más inteligente del mundo?",
+        "answers": [
+            "El chimpancé",
+            "El delfín",
+            "El elefante",
+            "El perro"
+        ]
+    },
+    {
+        "question": "¿Cuál es el continente más grande del mundo?",
+        "answers": [
+            "Asia",
+            "África",
+            "América",
+            "Europa"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más antiguo del mundo?",
+        "answers": [
+            "La medusa",
+            "La trucha",
+            "El pez globo",
+            "El pulpo"
+        ]
+    },
+    {
+        "question": "¿Cuál es el edificio más antiguo del mundo?",
+        "answers": [
+            "Pirámide de Djoser",
+            "Torre Eiffel",
+            "El Coliseo",
+            "La Muralla China"
+        ]
+    },
+    {
+        "question": "¿Cuál es el lugar más caliente del mundo?",
+        "answers": [
+            "Desierto del Sahara",
+            "Desierto de Atacama",
+            "El Gran Cañón",
+            "Polo Norte"
+        ]
+    },
+    {
+        "question": "¿Cuál es el río más caudaloso del mundo?",
+        "answers": [
+            "Amazonas",
+            "Nilo",
+            "Misisipi",
+            "Tigris-Eufrates"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más pequeño del mundo?",
+        "answers": [
+            "Pájaro enano de Cuba",
+            "La langosta",
+            "El mosquito",
+            "El saltamontes"
+        ]
+    },
+    {
+        "question": "¿Cuál es el lugar más seco del mundo?",
+        "answers": [
+            "Desierto de Atacama",
+            "Desierto de Mojave",
+            "Desierto del Gobi",
+            "Polo Norte"
+        ]
+    },
+    {
+        "question": "¿Cuál es el lugar más húmedo del mundo?",
+        "answers": [
+            "Parque Nacional del Monte Kinabalu",
+            "Amazonas",
+            "Selva tropical",
+            "Región montañosa del Himalaya"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más peligroso del mundo?",
+        "answers": [
+            "Cocodrilo",
+            "León",
+            "Tiburón",
+            "Serpiente de cascabel"
+        ]
+    },
+    {
+        "question": "¿Cuál es el pájaro más grande del mundo?",
+        "answers": [
+            "Avestruz",
+            "Águila real",
+            "Buitre",
+            "Cóndor"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más venenoso del mundo?",
+        "answers": [
+            "Mamba negra",
+            "Escorpión",
+            "Víbora de cascabel",
+            "Rana dendrobates"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más resistente del mundo?",
+        "answers": [
+            "Tardígrado",
+            "León",
+            "Elefante",
+            "Hipopótamo"
+        ]
+    },
+    {
+        "question": "¿Cuál es el animal más grande que haya existido en la Tierra?",
+        "answers": [
+            "Dinosaurio saurópodo",
+            "Mamut lanudo",
+            "Tigre dientes de sable",
+            "Oso de las cavernas"
+        ]
+    },
+    {
+        "question": "¿Cuál es la fórmula para calcular el volumen de una esfera?",
+        "answers": [
+            "(4/3)πr<sup>3</sup>",
+            "(3/4)πr<sup>3</sup>",
+            "πr<sup>2</sup>",
+            "(1/4)πr<sup>2</sup>"
+        ]
+    },
+    {
+        "question": "¿Cuál es la fórmula para calcular la longitud de una circunferencia?",
+        "answers": [
+            "2πr",
+            "πr",
+            "2r",
+            "πr<sup>2</sup>"
+        ]
+    },
+    {
+        "question": "¿Cuál es la fórmula para calcular el área de un cilindro?",
+        "answers": [
+            "2πr(r + h)",
+            "πrh",
+            "2rh",
+            "πr<sup>2</sup>"
+        ]
+    },
+    {
+        "question": "¿Cuál es la fórmula para calcular el área de un cubo?",
+        "answers": [
+            "6a <sup>2</sup>",
+            "a<sup>2</sup>",
+            "12a<sup>2</sup>",
+            "4a<sup>2</sup>"
+        ]
+    },
+    {
+        "question": "¿Cuántos lados tiene un cubo?",
+        "answers": [
+            "6",
+            "8",
+            "4",
+            "12"
+        ]
+    },
+    {
+        "question": "¿Cuántas aristas tiene un cubo?",
+        "answers": [
+            "12",
+            "6",
+            "8",
+            "10"
+        ]
+    },
+    {
+        "question": "¿Cuántos vértices tiene un tetraedro?",
+        "answers": [
+            "4",
+            "6",
+            "8",
+            "10"
+        ]
+    },
+    {
+        "question": "¿Cuántas caras tiene un octaedro?",
+        "answers": [
+            "8",
+            "6",
+            "12",
+            "10"
+        ]
+    }
+]

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi interfaz de pregunta y respuestas</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Alfa Slab One', cursive;
+        }
+        
+        body {
+            background: #333;
+            color: white;
+        }
+
+        .full-grid {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr .5fr auto;
+            z-index: 1;
+        }
+
+        .question {
+            grid-column: span 2;
+            display: grid;
+            place-content: center;
+            font-size: 64px;
+            margin: 0 50px;
+            text-align: center;
+        }
+
+        .answer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 50px;
+            margin: 1rem 5rem;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .answer:hover {
+            background-color: rgba(255, 255, 255, .5);
+        }
+
+        .score {
+            display: grid;
+            place-content: center;
+            font-size: 36px;
+        }
+
+        .green { color: lightgreen; }
+        .red { color: lightcoral; }
+
+        .timeout-bar-outer {
+            width: 100%;
+            height: 10px;
+            grid-column: span 2;
+        }
+
+        .timeout-bar-inner {
+            background-color: orange;
+            height: 100%;
+            width: 100%;    
+        }
+
+        .timeout-bar-inner.empty {
+            transition: width 30s linear;
+            width: 0;
+        }
+
+        .collapse { display: none; }
+        
+        .presentation {
+            font-size: 24px;
+            margin: 0 50px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .ui-button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 36px;
+            font-family: 'Alfa Slab One', cursive;
+            text-decoration: none;
+            
+            border: 1rem solid white;
+            border-radius: 20px;
+
+            margin: 20px;
+            cursor: pointer;
+            
+            display: grid;
+            place-content: center;           
+            
+        }
+
+        .ui-button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* BACKGROUND ANIMATION */
+
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .area{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #4e54c8;  
+            background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+            width: 100vw;
+            height:100vh;
+            margin: 0;
+            padding: 0;
+            z-index: -1;
+        }
+
+        .circles{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .circles li{
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            
+        }
+
+        .circles li:nth-child(1){
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+
+        .circles li:nth-child(2){
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .circles li:nth-child(3){
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(4){
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .circles li:nth-child(5){
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6){
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(7){
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8){
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9){
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10){
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+        @keyframes animate {
+
+            0%{
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+
+            100%{
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+
+        }
+        /* END VIDEO ANIMATION */
+
+    </style>
+    
+</head>
+<body>
+
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
+
+    <div class="full-grid" id="menuView">
+        <div class="question">GPT Quiz</div>
+
+        <p class="presentation">¡Bienvenidos a Quiz GPT! Este divertido juego ha sido creado usando ChatGPT y Github Copilot. ¡Prepárate para probar tus conocimientos y competir contra otros jugadores en una serie de preguntas y desafíos! ¡Únete a la diversión y demuestra lo que sabes!</p>
+        <p class="presentation">De momento, Quiz GPT es un juego para un solo jugador, lo que te permite desafiar tus conocimientos y mejorar tus habilidades en un entorno sin presión. Sin embargo, estamos trabajando en la implementación de un modo multijugador, por lo que en un futuro próximo podrás competir contra otros jugadores de todo el mundo. ¡Manténte atento a futuras actualizaciones y sigue disfrutando de Quiz GPT!</p>
+    
+        <button  id="startButton" class="ui-button">Start</button>
+        <a  href="https://chat.openai.com/chat" target="_blank" class="ui-button">Try ChatGPT</a>
+    </div>
+
+    <div class="full-grid collapse" id="gameView">
+        <div class="question" id="question"><span></span></div>
+        <p class="answer" id="resp1"></p>
+        <p class="answer" id="resp2"></p>
+        <p class="answer" id="resp3"></p>
+        <p class="answer" id="resp4"></p>
+
+        <p class="score green" id="rightScore"></p>
+        <p class="score red" id="wrongScore"></p>
+
+        <div class="timeout-bar-outer">
+            <div class="timeout-bar-inner" id="timeoutBar"></div>
+        </div>
+
+    </div>
+
+    <div class="full-grid collapse" id="endView">
+        <div class="question">Game Over</div>
+        <p class="presentation">Puedes volver a jugar en cualquier momento pulsando el botón de abajo.</p>
+        <p class="presentation">¡Has terminado el juego! ¡Gracias por jugar!</p>
+
+        <button  id="restartButton" class="ui-button">Volver a intentar</button>
+        <a  href="https://chat.openai.com/chat" target="_blank" class="ui-button">Try ChatGPT</a>
+
+        <p class="score green" id="rightScoreEnd"></p>
+        <p class="score red" id="wrongScoreEnd"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
