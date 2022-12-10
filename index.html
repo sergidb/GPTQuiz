@@ -49,14 +49,17 @@
             text-align: center;
         }
 
-        .answer:hover {
-            background-color: rgba(255, 255, 255, .5);
-        }
-
         .score {
             display: grid;
             place-content: center;
             font-size: 36px;
+        }
+
+        .score-zone {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
         }
 
         .green { color: lightgreen; }
@@ -106,8 +109,48 @@
             
         }
 
-        .ui-button:hover {
-            background-color: #3e8e41;
+        .gray-bg {
+            /*  Soft gray background */
+            background-color: #777;
+        }
+
+
+
+        /* When user has pointer (i. e. mouse) */
+        @media (pointer: fine) or (pointer: coarse) {
+
+            .ui-button:hover {
+                background-color: #3e8e41;
+            }
+
+            .answer:hover {
+                background-color: rgba(255, 255, 255, .5);
+            }
+
+        }
+
+        @media (max-width: 1000px) and (orientation: portrait) {
+
+            .question, .timeout-bar-outer {
+                grid-column: span 1;
+            }
+            
+            .full-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+            }
+
+            .score-zone {
+                grid-column: span 1;
+            }
+
+            .score {
+                font-size: 5rem;
+            }
+
+            .ui-button {
+                font-size: 4rem;
+            }
         }
 
         /* BACKGROUND ANIMATION */
@@ -272,7 +315,7 @@
         <p class="presentation">De momento, Quiz GPT es un juego para un solo jugador, lo que te permite desafiar tus conocimientos y mejorar tus habilidades en un entorno sin presión. Sin embargo, estamos trabajando en la implementación de un modo multijugador, por lo que en un futuro próximo podrás competir contra otros jugadores de todo el mundo. ¡Manténte atento a futuras actualizaciones y sigue disfrutando de Quiz GPT!</p>
     
         <button  id="startButton" class="ui-button">Start</button>
-        <a  href="https://chat.openai.com/chat" target="_blank" class="ui-button">Try ChatGPT</a>
+        <a  href="https://chat.openai.com/chat" target="_blank" class="ui-button gray-bg">Try ChatGPT</a>
     </div>
 
     <div class="full-grid collapse" id="gameView">
@@ -282,8 +325,10 @@
         <p class="answer" id="resp3"></p>
         <p class="answer" id="resp4"></p>
 
-        <p class="score green" id="rightScore"></p>
-        <p class="score red" id="wrongScore"></p>
+        <div class="score-zone">
+            <p class="score green" id="rightScore"></p>
+            <p class="score red" id="wrongScore"></p>
+        </div>
 
         <div class="timeout-bar-outer">
             <div class="timeout-bar-inner" id="timeoutBar"></div>
@@ -297,7 +342,7 @@
         <p class="presentation">¡Has terminado el juego! ¡Gracias por jugar!</p>
 
         <button  id="restartButton" class="ui-button">Volver a intentar</button>
-        <a  href="https://chat.openai.com/chat" target="_blank" class="ui-button">Try ChatGPT</a>
+        <a  href="https://chat.openai.com/chat" target="_blank" class="ui-button gray-bg">Try ChatGPT</a>
 
         <p class="score green" id="rightScoreEnd"></p>
         <p class="score red" id="wrongScoreEnd"></p>
